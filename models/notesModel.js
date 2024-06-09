@@ -1,4 +1,5 @@
 const  mongoose = require('mongoose');
+const UserModel = require('../models/userModel')
 
 const noteSchema = mongoose.Schema({
     title:{
@@ -10,7 +11,7 @@ const noteSchema = mongoose.Schema({
         required:true
     },
     userId:{
-        type:mongoose.Schema.type.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref: UserModel,
         required:true
     }

@@ -1,14 +1,20 @@
 const express = require('express');
+const {createNote,deletNote,editNote,getNotes} = require('../controllers/noteController');
+
+const checkToken = require('../middleware/auth');
 
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    console.log('this is the notes get method');
-});
+router.get('/',checkToken,getNotes);
 
-router.post('/',(req,res)=>{
-    console.log('this is the notes post method');
-});
+router.post('/',checkToken,createNote);
+
+router.delete('/:id',checkToken,deletNote);
+
+
+router.put('/:id',checkToken,editNote);
+
+
 
 module.exports = router;

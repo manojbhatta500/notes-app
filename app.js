@@ -9,20 +9,12 @@ require('dotenv').config();
 const app = express();
 app.use(bodyparser.json());
 
-app.get('/',(req,res)=>{
-    console.log('this is base url');
-    res.status(200).json(
-        {
-            "stats": `server is working fine on port ${PORT}`
-        }
-    );
 
-});
 
 
 app.use('/user',userRouter);
 
-app.use('/notte',notesRoute);
+app.use('/note',notesRoute);
 
 
 

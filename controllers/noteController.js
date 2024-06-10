@@ -1,6 +1,4 @@
 const noteModel = require('../models/notesModel');
-
-
 async function createNote(req,res){
     console.log('this is create note testing',req.userid);
 
@@ -61,6 +59,7 @@ async function deletNote(req,res){
         });
     }
 }
+
 async function editNote(req,res){
 
     console.log('this is edit note testing', req.params.id);

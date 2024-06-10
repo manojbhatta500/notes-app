@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// connecting to mongodb databse 
+
 
 const mongoConnectionApi = process.env.MONGOURL;
 mongoose.connect(mongoConnectionApi,{});
-
-
-
-
-
 
 
 

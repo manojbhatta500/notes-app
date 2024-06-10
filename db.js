@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
+// connecting to mongodb databse 
 
-
-const mongoConnectionApi = 'mongodb://127.0.0.1:27017/notes';
+const mongoConnectionApi = process.env.MONGOURL;
 mongoose.connect(mongoConnectionApi,{});
+
+
+
 
 const db = mongoose.connection;
 

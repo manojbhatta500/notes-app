@@ -58,6 +58,10 @@ async function logIn(req,res){
     
     const {userMail,userPassword} = req.body;
 
+    console.log('user mail ',userMail);
+    console.log('userpassword ',userPassword);
+
+
     if(!userMail || !userPassword){
         return res.status(400).json({
             message: "all feild are required"
@@ -80,7 +84,7 @@ async function logIn(req,res){
             email: existingUser.email,
             id: existingUser._id
         },secretKey);
-        return res.status(400).json({
+        return res.status(200).json({
             message:"successfully logged in ",
             email: existingUser.email,
             token: token

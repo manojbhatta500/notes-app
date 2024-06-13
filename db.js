@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 
+const localMongoDbUrl = 'mongodb://127.0.0.1:27017/notes';
 
 const mongoConnectionApi = process.env.MONGOURL;
-mongoose.connect(mongoConnectionApi,{});
+mongoose.connect(localMongoDbUrl,{});
 
 
 

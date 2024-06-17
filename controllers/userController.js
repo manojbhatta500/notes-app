@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 
 const secretKey = 'i will become great developer';
 
-// all test cases are done by me manually by using postman locally 
 
 
 
@@ -40,7 +39,6 @@ async function signUp (req,res){
             email: result.username,
             id: result._id
         },secretKey);
-        // test case working successfully 
         return res.status(200).json({
             message:"successfully created account",
             token : token

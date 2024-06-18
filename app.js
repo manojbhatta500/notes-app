@@ -15,7 +15,9 @@ app.use(cors());
 
 
 
-
+app.get('/test',(req,res)=>{
+    console.log('server is running');
+})
 
 app.use('/user',userRouter);
 
